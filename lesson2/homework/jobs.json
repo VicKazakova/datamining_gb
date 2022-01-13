@@ -1,11 +1,11 @@
 [
   {
-    "name": "HR бизнес-партнер / Руководитель отдела персонала",
-    "link": "https://hh.ru/vacancy/50244190?from=vacancy_search_list&query=HR&hhtmFrom=vacancy_search_list",
-    "company": "ИП Новикова Лилия Юрьевна",
+    "name": "HR менеджер",
+    "link": "https://hh.ru/vacancy/50878609?from=vacancy_search_list&query=HR&hhtmFrom=vacancy_search_list",
+    "company": "ИП Ильина Ал на Алексеевна",
     "location": "Москва",
-    "min_salary": 170000,
-    "max_salary": 200000,
+    "min_salary": 160000,
+    "max_salary": null,
     "currency": "руб."
   },
   {
@@ -27,20 +27,11 @@
     "currency": "руб."
   },
   {
-    "name": "HR аналитик",
-    "link": "https://hh.ru/vacancy/51046543?from=vacancy_search_list&query=HR&hhtmFrom=vacancy_search_list",
-    "company": "Национальный исследовательский университет Высшая школа экономики",
-    "location": "Москва",
-    "min_salary": 150000,
-    "max_salary": 150000,
-    "currency": "руб."
-  },
-  {
-    "name": "Рекрутер",
-    "link": "https://hh.ru/vacancy/50984566?from=vacancy_search_list&query=HR&hhtmFrom=vacancy_search_list",
-    "company": "ФГБУ ЦКБ с поликлиникой УДП РФ",
-    "location": "Москва, Крылатское и еще 1 ",
-    "min_salary": 100000,
+    "name": "Ведущий менеджер по подбору и адаптации / HR-партнер",
+    "link": "https://hh.ru/vacancy/50930505?from=vacancy_search_list&query=HR&hhtmFrom=vacancy_search_list",
+    "company": "Первый Дом Консалтинга Что делать Консалт",
+    "location": "Москва, Динамо",
+    "min_salary": 120000,
     "max_salary": null,
     "currency": "руб."
   },
@@ -54,12 +45,12 @@
     "currency": null
   },
   {
-    "name": "Ведущий менеджер по подбору и адаптации / HR-партнер",
-    "link": "https://hh.ru/vacancy/50930505?from=vacancy_search_list&query=HR&hhtmFrom=vacancy_search_list",
-    "company": "Первый Дом Консалтинга Что делать Консалт",
-    "location": "Москва, Динамо",
-    "min_salary": 120000,
-    "max_salary": null,
+    "name": "HR аналитик",
+    "link": "https://hh.ru/vacancy/51046543?from=vacancy_search_list&query=HR&hhtmFrom=vacancy_search_list",
+    "company": "Национальный исследовательский университет Высшая школа экономики",
+    "location": "Москва",
+    "min_salary": 150000,
+    "max_salary": 150000,
     "currency": "руб."
   },
   {
@@ -90,11 +81,11 @@
     "currency": "руб."
   },
   {
-    "name": "Главный менеджер по персоналу (HR-generalist)",
-    "link": "https://hh.ru/vacancy/50347545?from=vacancy_search_list&query=HR&hhtmFrom=vacancy_search_list",
-    "company": "Группа Компаний АВА ",
-    "location": "Москва",
-    "min_salary": 120000,
+    "name": "Рекрутер",
+    "link": "https://hh.ru/vacancy/50984566?from=vacancy_search_list&query=HR&hhtmFrom=vacancy_search_list",
+    "company": "ФГБУ ЦКБ с поликлиникой УДП РФ",
+    "location": "Москва, Крылатское и еще 1 ",
+    "min_salary": 100000,
     "max_salary": null,
     "currency": "руб."
   },
@@ -117,21 +108,30 @@
     "currency": null
   },
   {
+    "name": "Главный менеджер по персоналу (HR-generalist)",
+    "link": "https://hh.ru/vacancy/50347545?from=vacancy_search_list&query=HR&hhtmFrom=vacancy_search_list",
+    "company": "Группа Компаний АВА ",
+    "location": "Москва",
+    "min_salary": 120000,
+    "max_salary": null,
+    "currency": "руб."
+  },
+  {
+    "name": "Junior HR business partner (HR BP)",
+    "link": "https://hh.ru/vacancy/51055406?from=vacancy_search_list&query=HR&hhtmFrom=vacancy_search_list",
+    "company": "ООО Биннофарм Групп",
+    "location": "Москва",
+    "min_salary": null,
+    "max_salary": null,
+    "currency": null
+  },
+  {
     "name": "Стажер отдела подбора персонала/ HR Intern",
     "link": "https://hh.ru/vacancy/50341424?from=vacancy_search_list&query=HR&hhtmFrom=vacancy_search_list",
     "company": "atsearch",
     "location": "Москва, Минская",
     "min_salary": 40000,
     "max_salary": 70000,
-    "currency": "руб."
-  },
-  {
-    "name": "Ведущий менеджер по подбору персонала / HR",
-    "link": "https://hh.ru/vacancy/50816527?from=vacancy_search_list&query=HR&hhtmFrom=vacancy_search_list",
-    "company": "Pastila",
-    "location": "Москва, Павелецкая",
-    "min_salary": 100000,
-    "max_salary": 130000,
     "currency": "руб."
   },
   {
@@ -162,13 +162,13 @@
     "currency": "руб."
   },
   {
-    "name": "Junior HR",
-    "link": "https://hh.ru/vacancy/50942553?from=vacancy_search_list&query=HR&hhtmFrom=vacancy_search_list",
-    "company": "КЛИФФ",
-    "location": "Москва, Парк Победы",
-    "min_salary": null,
-    "max_salary": null,
-    "currency": null
+    "name": "Ведущий менеджер по подбору персонала / HR",
+    "link": "https://hh.ru/vacancy/50816527?from=vacancy_search_list&query=HR&hhtmFrom=vacancy_search_list",
+    "company": "Pastila",
+    "location": "Москва, Павелецкая",
+    "min_salary": 100000,
+    "max_salary": 130000,
+    "currency": "руб."
   },
   {
     "name": "Стажер HR-отдела (Graduate Recruitment)",
