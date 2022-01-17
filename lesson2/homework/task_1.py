@@ -9,25 +9,27 @@ url = 'https://hh.ru/search/vacancy'
 # job = input('Enter the job position: ')
 job = 'HR'
 job_list = []
-# page = int(input('Enter the number of pages: '))
-pages = 2
+
 
 headers = \
     {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) '
                    'Chrome/96.0.4664.110 Safari/537.36'}
+params = {'clusters': 'true',
+          'area': 1,
+          'ored_clusters': 'true',
+          'enable_snippets': 'true',
+          'salary': None,
+          'text': job,
+          'page': 1,
+          'hhtmFrom': 'vacancy_search_list'}
 
-for i in range(1, pages + 1):
-    params = {'clusters': 'true',
-              'area': 1,
-              'ored_clusters': 'true',
-              'enable_snippets': 'true',
-              'salary': None,
-              'text': job,
-              'page': i,
-              'hhtmFrom': 'vacancy_search_list'}
-
+while True:
     response = requests.get(url, params=params, headers=headers)
     soup = BeautifulSoup(response.text, 'html.parser')
+
+    if not soup.find('a', {'data-qa': 'pager-next'}):
+        break
+
     jobs = soup.find_all('div', {'class': 'vacancy-serp-item'})
     for job in jobs:
         job_data = {}
@@ -41,6 +43,10 @@ for i in range(1, pages + 1):
                 min_salary = int(re.sub("[^a-z0-9а-яА-Я]+", "", new_salary.split(' ')[1], flags=re.IGNORECASE))
                 max_salary = None
                 currency = new_salary.split(' ')[2]
+            elif 'до' in new_salary:
+                min_salary = None
+                max_salary = int(re.sub("[^a-z0-9а-яА-Я]+", "", new_salary.split(' ')[1], flags=re.IGNORECASE))
+                currency = new_salary.split(' ')[2]
             else:
                 min_salary = int(re.sub("[^a-z0-9а-яА-Я]+", "", new_salary.split(' ')[0], flags=re.IGNORECASE))
                 max_salary = int(re.sub("[^a-z0-9а-яА-Я]+", "", new_salary.split(' ')[2], flags=re.IGNORECASE))
@@ -49,8 +55,11 @@ for i in range(1, pages + 1):
             min_salary = None
             max_salary = None
             currency = None
-        company = job.find('a', {'data-qa': 'vacancy-serp__vacancy-employer'}).text
-        new_company = re.sub("[^a-z0-9а-яА-Я]+", " ", company, flags=re.IGNORECASE)
+        try:
+            company = job.find('a', {'data-qa': 'vacancy-serp__vacancy-employer'}).text
+            new_company = re.sub("[^a-z0-9а-яА-Я]+", " ", company, flags=re.IGNORECASE)
+        except AttributeError:
+            new_company = None
         location = job.find('div', {'data-qa': 'vacancy-serp__vacancy-address'}).text
 
         job_data['name'] = name
@@ -62,6 +71,8 @@ for i in range(1, pages + 1):
         job_data['currency'] = currency
 
         job_list.append(job_data)
+
+    params['page'] += 1
 
 with open('jobs.json', 'w', encoding='utf-8') as f:
     json.dump(job_list, f, ensure_ascii=False)
