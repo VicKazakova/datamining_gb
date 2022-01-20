@@ -61,6 +61,7 @@ while True:
             currency = None
         try:
             company = job.find('a', {'data-qa': 'vacancy-serp__vacancy-employer'}).text
+            print(company)
             new_company = re.sub("[^a-z0-9а-яА-Я]+", " ", company, flags=re.IGNORECASE)
         except AttributeError:
             new_company = None

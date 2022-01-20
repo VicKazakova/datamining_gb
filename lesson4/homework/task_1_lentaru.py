@@ -17,8 +17,6 @@ headers = \
 response = requests.get('https://lenta.ru/', headers=headers)
 dom = html.fromstring(response.text)
 
-final_news = []
-
 big_news = dom.xpath("//div[@class='topnews']")
 for i in big_news:
     news = {}
@@ -34,7 +32,6 @@ for i in big_news:
     news['link'] = link
     news['date'] = date
     news['time'] = time
-    final_news.append(news)
 
     try:
         db_news.insert_one(news)
@@ -61,7 +58,6 @@ for small_news in items:
     news['link'] = link
     news['date'] = date
     news['time'] = time
-    final_news.append(news)
 
     try:
         db_news.insert_one(news)
