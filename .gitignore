@@ -2,3 +2,4 @@ venv
 .idea
 __pycache__/
 classwork/
+lesson5/classwork/chromedriver
